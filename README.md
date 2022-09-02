@@ -19,6 +19,6 @@
 <img src = "" label = "ERD" /><br></br>
 
 <h2>Board</h2>
-<a href="https://github.com/users/phicov/projects/3">Board</a>
+<a target=”_blank” href="https://github.com/users/phicov/projects/3">Board</a>
 
 
