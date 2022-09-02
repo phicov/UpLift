@@ -21,4 +21,5 @@
 <h2>Board</h2>
 <a href="https://github.com/users/phicov/projects/3" target=”_blank”>Board</a>
 
+<h6>Socials</h6>
 
