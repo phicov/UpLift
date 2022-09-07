@@ -16,7 +16,7 @@
 <a href="https://ibb.co/h1q3LL0"><img src="https://i.ibb.co/gFnkmmY/Up-Lift-CHD-drawio.png" alt="Up-Lift-CHD-drawio" border="0"></a>
 
 <h2>ERD</h2>
-<a href="https://ibb.co/CHxDHHG"><img src="https://i.ibb.co/2kXHkk4/Up-Lift-ERD-drawio.png" alt="Up-Lift-ERD-drawio" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/vBJnDyy/Up-Lift-ERD.png" alt="Up-Lift-ERD" border="0"></a>
 
 <h2>Board</h2>
 <a href="https://github.com/users/phicov/projects/3" target=”_blank”>Board</a>
