@@ -7,8 +7,10 @@
 
 <h2>Languages Used</h2>
 <ul>
+  <li>MongoDB</li>
+  <li>Express</li>
   <li>ReactJS</li>
-  <li>Django</li>
+  <li>NodeJS</li>
 </ul>
 
 
