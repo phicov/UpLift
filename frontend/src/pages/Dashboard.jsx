@@ -1,30 +1,62 @@
-import {useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
-import {useSelector} from 'react-redux'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import ForumForm from '../components/forumForm'
+import forumItem from '../components/forumItem'
+import Spinner from '../components/Spinner'
+import { getForums, reset } from '../features/forums/forumSlice'
 
 function Dashboard() {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
-    const {user} = useSelector((state) =>state.auth)
-    
+    const { user } = useSelector((state) => state.auth)
+    const { forums, isLoading, isError, message } = useSelector(
+    (state) => state.goals
+    )
+
     useEffect(() => {
-        if(!user){
+    if (isError) {
+        console.log(message)
+    }
+
+    if (!user) {
         navigate('/login')
-        }
-    }, [user, navigate])
-    
-    
+    }
+
+    dispatch(getForums())
+
+    return () => {
+        dispatch(reset())
+    }
+    }, [user, navigate, isError, message, dispatch])
+
+    if (isLoading) {
+    return <Spinner />
+    }
+
     return (
     <>
         <section className='heading'>
-            <h1>Welcome {user && user.name}</h1>
-            <p>Forum Dashboard</p>
+        <h1>Welcome {user && user.name}</h1>
+        <p>Forums Dashboard</p>
         </section>
-        
+
         <ForumForm />
+
+        <section className='content'>
+        {forums.length > 0 ? (
+            <div className='forums'>
+            {forums.map((forum) => (
+                <ForumItem key={forum._id} forum={forum} />
+            ))}
+            </div>
+        ) : (
+            <h3>You have not set any Forum</h3>
+        )}
+        </section>
     </>
-    )
+)
 }
 
 export default Dashboard
