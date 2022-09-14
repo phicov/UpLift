@@ -6,7 +6,7 @@ const Forum = require('../models/forumModel')
 //@route GET /api/forums
 //@access Private
 const getForum = asyncHandler(async (req,res) => {
-    const forum = await Forum.find()
+    const forum = await Forum.find({ user: req.user.id })
 
     res.status(200).json(forum)
 })
@@ -22,6 +22,7 @@ const setForum = asyncHandler(async (req, res) => {
 
     const forum = await Forum.create({
         text: req.body.text,
+        user: req.user.id
     })
 
     res.status(200).json(forum)
