@@ -28,7 +28,7 @@
 #
 <h5>Tools Used</h5>
 <ul>
-  <li><a href = ""></a></li>
+  <li><a href = "https://react-icons.github.io/react-icons/icons?name=fa"></a></li>
   <li><a href = ""></a></li>
   <li><a href = ""></a></li>
   <li><a href = ""></a></li>
