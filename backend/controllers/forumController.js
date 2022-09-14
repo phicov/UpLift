@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler')
 
 const Forum = require('../models/forumModel')
+const User = require('../models/userModel')
 
 //@desc Get Forums
 //@route GET /api/forums
@@ -40,6 +41,20 @@ const updateForum = asyncHandler(async (req,res) =>{
         throw new Error('Forum not found')
     }
 
+    const user = await User.findById(req.user.id)
+
+    // Check for user
+    if(!user){
+        res.status(401)
+        throw new Error('User not found')
+    }
+
+    // Make sure the logged in user matches the forum user.
+    if(forum.user.toString() !== user.id) {
+        res.status(401)
+        throw new Error('User not authorized')
+    }
+
     const updatedForum = await Forum.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
     })
@@ -56,6 +71,20 @@ const deleteForum = asyncHandler(async (req,res) =>{
     if(!forum){
         res.status(400)
         throw new Error('Forum not found')
+    }
+
+    const user = await User.findById(req.user.id)
+
+    // Check for user
+    if(!user){
+        res.status(401)
+        throw new Error('User not found')
+    }
+
+    // Make sure the logged in user matches the forum user.
+    if(forum.user.toString() !== user.id) {
+        res.status(401)
+        throw new Error('User not authorized')
     }
 
     await forum.remove({ id: req.params.id })
