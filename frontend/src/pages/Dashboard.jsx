@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import ForumForm from '../components/forumForm'
-import forumItem from '../components/forumItem'
+import ForumForm from '../components/ForumForm'
+import ForumItem from '../components/ForumItem'
 import Spinner from '../components/Spinner'
 import { getForums, reset } from '../features/forums/forumSlice'
 
@@ -12,7 +12,7 @@ function Dashboard() {
 
     const { user } = useSelector((state) => state.auth)
     const { forums, isLoading, isError, message } = useSelector(
-    (state) => state.goals
+    (state) => state.forums
     )
 
     useEffect(() => {

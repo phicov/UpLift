@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { createForums } from '../features/forums/forumSlice'
+import { createForum } from '../features/forums/forumSlice'
 
 
 function ForumForm() {
@@ -11,7 +11,7 @@ function ForumForm() {
     const onSubmit = e => {
         e.preventDefault()
 
-        dispatch(createForums({text}))
+        dispatch(createForum({text}))
         setText('')
     }
 

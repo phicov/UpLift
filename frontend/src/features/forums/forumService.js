@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const API_URL = '/api/forums/'
 
-// Create new goal
+// Create new forum
 const createForum = async (forumData, token) => {
     const config = {
     headers: {
@@ -15,7 +15,7 @@ const createForum = async (forumData, token) => {
     return response.data
 }
 
-// Get user goals
+// Get user forums
 const getForums = async (token) => {
     const config = {
     headers: {
@@ -41,7 +41,7 @@ const deleteForum = async (forumId, token) => {
     return response.data
 }
 
-const goalService = {
+const forumService = {
     createForum,
     getForums,
     deleteForum,
