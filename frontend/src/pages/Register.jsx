@@ -117,7 +117,7 @@ function Register() {
                 className="form-control" 
                 id='password2' 
                 name='password2' 
-                value={password} 
+                value={password2} 
                 placeholder="Confirm password" 
                 onChange={onChange}
                 />
