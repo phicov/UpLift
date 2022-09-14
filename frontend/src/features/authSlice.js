@@ -12,6 +12,16 @@ const initialState = {
     message: ''
 }
 
+// Register user
+export const register = createAsyncThunk('auth/register', async(user, thunkAPI) => {
+    try {
+        return await authService.register(user)
+    } catch (error) {
+        
+    }
+})
+
+
 export const authSlice = createSlice({
     name: 'auth',
     initialState,
