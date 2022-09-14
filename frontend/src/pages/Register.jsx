@@ -1,4 +1,4 @@
-import e from 'cors'
+
 import {useState, useEffect} from 'react'
 import { FaUser } from 'react-icons/fa'
 
@@ -28,7 +28,7 @@ function Register() {
         <h1>
             <FaUser />Register
         </h1>
-        <p>Please create an account</p>
+        <p>Create an Account</p>
     </section>
 
     <section className='form'>
