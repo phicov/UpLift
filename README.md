@@ -9,6 +9,8 @@
 <ul>
   <li>MongoDB</li>
   <li>Express</li>
+  <li>Mongoose</li>
+  <li>Redux</li>
   <li>ReactJS</li>
   <li>NodeJS</li>
 </ul>
