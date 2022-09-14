@@ -26,5 +26,21 @@
 <a href="https://github.com/users/phicov/projects/3" target=”_blank”>Board</a>
 
 #
+<h5>Tools Used</h5>
+<ul>
+  <li><a href = ""></a></li>
+  <li><a href = ""></a></li>
+  <li><a href = ""></a></li>
+  <li><a href = ""></a></li>
+  <li><a href = ""></a></li>
+  <li><a href = ""></a></li>
+  <li><a href = ""></a></li>
+  <li><a href = ""></a></li>
+  <li><a href = ""></a></li>
+</ul>
+
+#
 <h6>Socials</h6>
+
+
 
