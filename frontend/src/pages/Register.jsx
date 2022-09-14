@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import {toast} from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { register, reset} from '../features/authSlice'
+import Spinner from '../components/Spinner'
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ function Register() {
         }
 
         dispatch(reset())
-        
+
     }, [user, isError, isSuccess, message, navigate, dispatch])
 
     const onChange = (e) => {
@@ -60,7 +61,11 @@ function Register() {
         }
     } 
 
-    return <>
+    if(isLoading){
+        return <Spinner />
+    }
+
+    return (<>
     <section className='heading'>
         <h1>
             <FaUser />Register
@@ -129,7 +134,7 @@ function Register() {
     </section>
     
     </>
-
+    )
 }
 
 export default Register
