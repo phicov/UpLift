@@ -14,7 +14,11 @@ function Dashboard() {
     }, [user, navigate])
     
     
-    return (<div>Dashboard</div>
+    return (
+        <section className='heading'>
+            <h1>WElcome {user && user.name}</h1>
+            <p>Forum Dashboard</p>
+        </section>
     )
 }
 
