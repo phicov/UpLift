@@ -7,6 +7,18 @@ function Header() {
             <div className='logo'>
                 <Link to ="/">ForumSetter</Link>
             </div>
+            <ul>
+                <li>
+                    <Link to ="/login">
+                        <FaSignInAlt /> Login
+                    </Link>
+                </li>
+                <li>
+                    <Link to ="/register">
+                        <FaUser /> Register
+                    </Link>
+                </li>
+            </ul>
         </header>
     )
 }
